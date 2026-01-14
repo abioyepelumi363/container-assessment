@@ -5,13 +5,13 @@
 
 ---
 
-## 📖 Project Overview
+## Project Overview
 This repository contains the complete DevOps solution for modernizing the **MuchTodo** backend application. The solution involves:
 1.  **Dockerization:** Creating an optimized, multi-stage Docker image for the Golang API.
 2.  **Local Development:** A robust `docker-compose` setup with MongoDB and environment management.
 3.  **Orchestration:** Full Kubernetes deployment using **Kind**, including Ingress, ConfigMaps, and Secrets.
 
-## 📂 Project Structure
+## Project Structure
 
 ```text
 container-assessment/
@@ -32,7 +32,7 @@ container-assessment/
 
 ---
 
-## 🛠️ Prerequisites
+## Prerequisites
 
 * **Docker Desktop** (or Docker Engine + Compose)
 * **Kind** (Kubernetes in Docker)
@@ -41,7 +41,7 @@ container-assessment/
 
 ---
 
-## 🚀 Phase 1: Docker Configuration
+## Phase 1: Docker Configuration
 
 The Docker setup uses a **multi-stage build** to keep the final image lightweight and secure. It compiles the Go binary in a builder stage and runs it in a minimal Alpine container as a non-root user.
 
@@ -75,7 +75,7 @@ curl http://localhost:8080/health
 
 ---
 
-## ☸️ Phase 2: Kubernetes Deployment (Kind)
+## Phase 2: Kubernetes Deployment (Kind)
 
 The Kubernetes setup uses **Kind** to simulate a real cluster environment with Ingress support.
 
@@ -133,7 +133,7 @@ curl http://localhost:30080/health
 
 ---
 
-## 📸 Deployment Evidence
+## Deployment Evidence
 
 Screenshots validating the implementation are stored in the `evidence/` directory:
 
@@ -146,7 +146,7 @@ Screenshots validating the implementation are stored in the `evidence/` director
 
 ---
 
-## 🧹 Cleanup
+## Cleanup
 
 To remove the Kubernetes resources and delete the local cluster:
 
